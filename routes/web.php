@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'DogController@index');
 
-Route::get('/dogs/{name}', function($name) {
-    return 'You are reading the food amount for' .$name;
-});
+Route::get('/{name}', 'DogController@info');
