@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/dogs/{name}', function($name) {
+    return 'You are reading the food amount for' .$name;
+});
