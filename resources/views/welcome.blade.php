@@ -1,13 +1,13 @@
-<!doctype html>
-<html lang="en">
-<head>
+@extends('layouts.master')
 
-    <title>Dog Food Calculator</title>
-    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
-</head>
-<body>
+@section('title')
+@endsection
+
+@push('head')
+@endpush
+
+@section('content')
 <div class='container'>
-    <img src='images/nutro.png' alt='Dog Food'/>
     <h1>Nutro Dog Food Calculator</h1>
 
     <form method='GET' action=''>
@@ -49,10 +49,6 @@
         <input type='submit' value='Enter' id='submit'>
 
     </form>
-
-
 </div>
+@endsection
 
-
-</body>
-</html>
