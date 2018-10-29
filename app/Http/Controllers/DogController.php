@@ -8,6 +8,6 @@ class DogController extends Controller
 {
     public function info($name)
     {
-        return 'You are reading the food amount for' . $name;
+        return view('dogs.info')->with(['name' => ucfirst($name)]);
     }
 }
