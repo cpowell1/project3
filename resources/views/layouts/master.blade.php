@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang='en'>
 <head>
-    <title>@yield('title', 'Nutro Dog Calculator')</title>
+    <title>@yield('title', config('app.name'))</title>
     <meta charset='utf-8'>
     <link href='/css/project3.css' type='text/css' rel='stylesheet'>
 
