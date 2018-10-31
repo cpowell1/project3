@@ -10,9 +10,9 @@
 <div class='container'>
     <h1>Nutro Dog Food Calculator</h1>
 
-    <form method='GET' action=''>
+    <form method='GET' action='/info-process'>
         <label>Your Pet's Name:
-            <input type='text' name='petName' value=''>
+            <input type='text' name='petName'>
         </label>
 
         <label for='size'>Select Your Pet's Size:</label>

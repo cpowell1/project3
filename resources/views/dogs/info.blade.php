@@ -1,12 +1,16 @@
 @extends('layouts.master')
 
 @section('title')
-    {{ $name }}
 @endsection
 
 @push('head')
 @endpush
 
 @section('content')
-    <p>You are reading the food amount for {{ $name }}</p>
+    @isset($petName, $size, $petAge)
+        <p>{{ $petName }} is a(n) {{ $petAge }} and weights {{ $size }}. {{ $petName }} need {{$size}} cup(s) of food per day.</p>
+    @endisset
+
+
+
 @endsection

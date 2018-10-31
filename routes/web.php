@@ -2,4 +2,6 @@
 
 Route::get('/', 'IndexController');
 
-Route::get('/{name}', 'DogController@info');
+Route::get('/info-process', 'DogController@infoProcess');
+
+Route::get('/your-results', 'DogController@infoSubmitted');
