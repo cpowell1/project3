@@ -45,14 +45,23 @@
                                   value='Senior'>Senior</label>
                 </li>
             </ul>
+
             <input type='submit' value='Enter' id='submit'>
 
         </form>
 
+        @if(count($errors) > 0)
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        @endif
+
 
     <div id='results'>
         @isset($petName, $size, $petAge)
-            <p>{{ $petName }} is a(n) {{ $petAge }} and weighs {{ $size }} pound(s). {{ $petName }} need {{$size}} cup(s) of food per day.</p>
+            <p>{{ $petName }} is a(n) {{ $petAge }} and weighs {{ $size }} pound(s). {{ $petName }} needs {{ $results }} cup(s) of food per day.</p>
         @endisset
 
 
