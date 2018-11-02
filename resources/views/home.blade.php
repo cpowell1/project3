@@ -10,7 +10,7 @@
 
         <h1>Nutro Dog Food Calculator</h1>
 
-        <form method='GET' action='/info-process'>
+        <form method='GET' action='{{ url('/info-process') }}'>
             <label>Your Pet's Name:
                 <input type='text' name='petName' value='{{$petName}}'>
             </label>

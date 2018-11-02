@@ -25,7 +25,7 @@ class DogController extends Controller
     {
         $petName = $request->input('petName', null);
         $size = $request->input('size', null);
-        $petAge = $request->input('petAge', null);
+        $petAge = $request->input('petAge', false);
 
         $dogs = [
             'Puppy' => [
