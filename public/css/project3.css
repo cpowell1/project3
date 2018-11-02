@@ -1,8 +1,62 @@
 body {
     margin: auto;
     text-align: center;
+    font-family: 'Arvo', serif;
 }
 
 footer {
-    background-color: #e3e3e3;
+    background-color: #555555;
+    padding: 5px;
+    color: white;
+    font-size: 12px;
 }
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #e3e3e3;
+}
+
+.container {
+background-color: #e3e3e3;
+width: 50%;
+margin: auto;
+text-align: center;
+}
+
+li {
+    list-style-type: none;
+    margin: auto;
+}
+
+#submit {
+background-color: #003366;
+width: 150px;
+margin: auto;
+display: block;
+padding: 10px;
+color: white;
+margin-bottom: 10px;
+font-family: 'Arvo', serif;
+font-size: 15px;
+}
+
+#results {
+background-color: #014411;
+padding: 10px;
+color: white;
+}
+
+label {
+display: block;
+margin: auto
+}
+
+input, select {
+display: block;
+margin: auto;
+margin-bottom: 10px;
+margin-top: 10px;}

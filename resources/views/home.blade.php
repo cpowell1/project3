@@ -7,7 +7,7 @@
 @endpush
 
 @section('content')
-    <div class='container'>
+
         <h1>Nutro Dog Food Calculator</h1>
 
         <form method='GET' action='/info-process'>
@@ -28,7 +28,7 @@
             </select>
 
             <label class='age'>Your Pet's Age:</label>
-            <ul>
+            <ul id='checkboxes'>
                 <li>
                     <label><input type='checkbox'
                                   name='petAge'
@@ -48,7 +48,7 @@
             <input type='submit' value='Enter' id='submit'>
 
         </form>
-    </div>
+
 
     <div id='results'>
         @isset($petName, $size, $petAge)
