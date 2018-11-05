@@ -75,6 +75,8 @@ class DogController extends Controller
                 'size' => 'required',
                 'petAge' => 'required',
             ]);
+
+
         }
 
 }
