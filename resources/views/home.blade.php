@@ -12,8 +12,9 @@
 
         <form method='GET' action='{{ url('/info-process') }}'>
             <label>Your Pet's Name:
-                <input type='text' name='petName' value='{{$petName}}'>
+                <input type='text' name='petName' id="petName" value='{{$petName}}'>
             </label>
+            @include('modules.error', ['field' => 'petName'])
 
             <label for='size'>Select Your Pet's Size:</label>
             <select name='size' id='size'>
@@ -26,6 +27,7 @@
                 <option value='81-100'>81-100lbs.</option>
                 <option value='Over 100'>Over 100lbs.</option>
             </select>
+            @include('modules.error', ['field' => 'size'])
 
             <label class='age'>Your Pet's Age:</label>
             <ul id='checkboxes'>
@@ -45,34 +47,18 @@
                                   value='Senior'>Senior</label>
                 </li>
             </ul>
+            @include('modules.error', ['field' => 'petAge'])
 
             <input type='submit' value='Enter' id='submit'>
 
         </form>
 
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
+
+        @if(count($errors) == 0)
+            @include('modules.results')
         @endif
 
-        @foreach ($errors->all() as $message) {
-            {{ $php_errormsg }}
-        }
-        @endforeach
 
-
-    <div id='results'>
-        @isset($petName, $size, $petAge)
-            <p>{{ $petName }} is a(n) {{ $petAge }} and weighs {{ $size }} pound(s). {{ $petName }} needs {{ $results }} cup(s) of food per day.</p>
-        @endisset
-
-
-    </div>
 
 @endsection
 

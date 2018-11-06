@@ -59,4 +59,12 @@ input, select {
 display: block;
 margin: auto;
 margin-bottom: 10px;
-margin-top: 10px;}
+margin-top: 10px;
+}
+
+#errors {
+font-size: 10px;
+margin-bottom: 10px;
+font-style: italic;
+color: darkred;
+}

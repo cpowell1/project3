@@ -23,7 +23,7 @@ class DogController extends Controller
 
     public function infoProcess(Request $request)
     {
-        $petName = $request->input('petName', null);
+        $petName = $request->input('petName', '');
         $size = $request->input('size', null);
         $petAge = $request->input('petAge', false);
 
@@ -57,27 +57,30 @@ class DogController extends Controller
             ],
         ];
 
-        $results = $dogs[$petAge][$size];
+
+
+        $request->validate([
+            'petName' => 'required',
+            'size' => 'required',
+            'petAge' => 'required',
+        ]);
+
+        if ($request->has($errors)) {
+           return 'Please fix the errors.';
+        } else {
+          $results = $dogs[$petAge][$size];
+        }
+
 
         return redirect('/')->with([
             'petName' => $petName,
             'size' => $size,
-            'petAge' => $request->has('petAge'),
+            'petAge' => $petAge,
             'results' => $results,
         ]);
         }
 
-        public
-        function store(Request $request)
-        {
-            $request->validate([
-                'petName' => 'required|alpha',
-                'size' => 'required',
-                'petAge' => 'required',
-            ]);
 
-
-        }
 
 }
 
