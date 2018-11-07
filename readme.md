@@ -3,16 +3,20 @@
 + Production URL: <http://project3.christianpowell.me>
 
 ## Outside resources
-*Your list of outside resources go here*
+ * [Determine when form is submitted](https://wordpress.stackexchange.com/questions/276445/post-form-action-results-on-the-same-page)
+   * I used this resource to determine how to write an if statement in the view of my project that would display a DIV when the form was submitted. 
+ * [Understand Undefined Index Error](https://stackoverflow.com/questions/4261133/notice-undefined-variable-notice-undefined-index-and-notice-undefined)
 
 ## 3 Unique inputs
-*You don't have to list all inputs, just 3 unique ones. The following is an example of what I'd put if my project was the xkcd Password Generator: (1) Text input to indicate number of words in password, (2) Checkbox to indicate whether to include a number (3) Dropdown to indicate what symbol to include*
+ * Text field to enter pet's name
+ * Drop down to select dog's weight
+ * Checkbox to check dog's age
 
 ## Packages
-*List the name of any packages you add to your project that do not come with Laravel by default; this should include, but is not limited to, barryvdh/laravel-debugbar*
+ * barryvdh/laravel-debugbar
 
 ## Code style divergences
-*list any divergences from PSR-1/PSR-2 and course guidelines on code style*
+ * none
 
 ## Notes for instructor
-*Any notes for me to refer to while grading; if none, omit this section*
+ * Thanks for all the help on this project.
