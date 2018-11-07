@@ -23,6 +23,12 @@ class DogController extends Controller
 
     public function infoProcess(Request $request)
     {
+        $request->validate([
+            'petName' => 'required|alpha',
+            'size' => 'required',
+            'petAge' => 'required',
+        ]);
+
         $petName = $request->input('petName', '');
         $size = $request->input('size', null);
         $petAge = $request->input('petAge', false);
@@ -35,7 +41,7 @@ class DogController extends Controller
                 '41-60' => '2.4',
                 '61-80' => '3.5',
                 '81-100' => '4.5',
-                '101' => '6'
+                'Over 100' => '6'
             ],
             'Adult' => [
                 '0-15' => '1',
@@ -44,7 +50,7 @@ class DogController extends Controller
                 '41-60' => '3.5',
                 '61-80' => '4.5',
                 '81-100' => '5.5',
-                '101' => '6+'
+                'Over 100' => '6+'
             ],
             'Senior' => [
                 '0-15' => '1/2',
@@ -53,24 +59,11 @@ class DogController extends Controller
                 '41-60' => '3',
                 '61-80' => '4',
                 '81-100' => '5',
-                '101' => '5.5'
+                'Over 100' => '5.5'
             ],
         ];
 
-
-
-        $request->validate([
-            'petName' => 'required',
-            'size' => 'required',
-            'petAge' => 'required',
-        ]);
-
-        if ($request->has($errors)) {
-           return 'Please fix the errors.';
-        } else {
-          $results = $dogs[$petAge][$size];
-        }
-
+        $results = $dogs[$petAge][$size];
 
         return redirect('/')->with([
             'petName' => $petName,
@@ -78,9 +71,7 @@ class DogController extends Controller
             'petAge' => $petAge,
             'results' => $results,
         ]);
-        }
-
-
+    }
 
 }
 
